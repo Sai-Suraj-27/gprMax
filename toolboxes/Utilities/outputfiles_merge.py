@@ -80,7 +80,7 @@ def merge_files(outputfiles, removefiles=False):
         removefiles: boolean flag to remove individual output files after merge.
     """
 
-    merged_outputfile = os.path.commonprefix(outputfiles) + "_merged.h5"
+    merged_outputfile = f"{os.path.commonprefix(outputfiles)}_merged.h5"
 
     # Combined output file
     fout = h5py.File(merged_outputfile, "w")
